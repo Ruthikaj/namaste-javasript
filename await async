@@ -1,0 +1,67 @@
+Promise: Think of a promise as a guarantee made by someone (like a function) to do something and provide you with the result later. 
+It's like ordering food at a restaurant. You get a promise (receipt) saying your order will be ready soon. 
+You can wait for it (.then()) or check on it later (.catch()).
+
+
+
+Async/Await: Async/await is like asking someone (a function) to do something for you, but instead of waiting for them to finish right there, 
+you tell them you'll do something else while they work. It's like asking a friend to pick up your order from the restaurant. 
+You can go do other things (like order a drink) while your friend (the async function) waits for the food (awaits the promise).
+
+Ques). for those who thinks if code reaches await of p1 suspends function execution and after 5 sec it should go to await p2 the timer
+for p2 should start and should take 10 sec there so overall function execution should be 15sec?
+
+Ans). the timer ticking doesn't start at await, instead it started in the beginning of the code only where promise was declared. 
+
+If the declaration would have been like inside async p1 declare then p1 await after that p2 declared follwed by p2 await then function would have taken 15 secs
+
+• Async/await used for handling promises
+• Async always return a promise
+° Await can only used inside an async function
+° Can only write await keyword infront of a promise
+
+
+ 🖥 `async` is used before a function name to create an async function, which always returns a promise, even if no promise is explicitly returned.
+💡 The `await` keyword is used to pause the execution of an async function until a promise is resolved, simplifying promise handling.
+
+🚫 `await` can only be used inside an async function; using it elsewhere will result in a syntax error.
+
+⏰ If a promise is returned from an async function, it's not wrapped in an additional promise; it's returned as is.
+
+
+🔄 Async/await simplifies promise handling compared to the traditional `.then()` syntax, making code easier to understand and manage.
+Async/await behavior differs from traditional promises; in async functions, JavaScript waits for `await` promises to resolve before moving to the next line of code.
+ 🕒 JavaScript's async/await functionality allows the program to wait for promise resolution, unlike traditional promise handling.
+🔄 Async/await differs from traditional promise handling by pausing the program's execution until promises are resolved, providing clearer and more sequential code.
+🧠 When using async/await, the program will wait for all promises to resolve before proceeding, ensuring synchronous execution despite asynchronous operations
+JavaScript's async/await does not actually halt execution but rather suspends function execution until promises are resolved.
+
+📚 Async/await suspends function execution without blocking the main thread, allowing other events to be processed in JavaScript's single-threaded environment.
+🛠 Asynchronous debugging can be challenging, but understanding how code execution is suspended and resumed helps in troubleshooting.
+
+
+
+------------------------------
+
+
+
+
+🌐 Fetch API simplifies making HTTP requests, returning a promise for handling responses, which can be further simplified with async/await
+
+51:22 🛂 Async/await suspends function execution until promises are resolved, facilitating sequential handling of asynchronous operations.
+
+56:05 🚫 Error handling in async/await can be done using try-catch blocks, providing a cleaner alternative to .catch() for promise rejections.
+
+59:52 🕵 Handling errors in async/await can also be done using .catch() on the returned promise, offering flexibility in error management approaches.
+
+01:02:49 📝 Interviewers may inquire about async/await, requiring explanations of its purpose, usage, and underlying promise handling mechanisms.
+
+01:05:56 🍬 Async/await is syntactic sugar over promises, offering a more concise and readable way to handle asynchronous operations, but ultimately functioning similarly under the hood.
+
+01:06:09 💡 Async/await simplifies code readability by eliminating the need for extensive promise chaining, making code easier to understand and debug.
+
+01:07:03 🛠 Using async/await is recommended over traditional promise chaining for handling asynchronous operations due to improved code clarity and debugging.
+
+
+
+
